@@ -3,6 +3,7 @@ import { v } from "convex/values";
 
 export default defineSchema({
   users: defineTable({
+    //defines the users table in the database.
     tokenIdentifier: v.string(),
     clerkId: v.string(),
     name: v.optional(v.string()),
@@ -16,7 +17,7 @@ export default defineSchema({
     .index("by_username", ["username"]),
 
   cards: defineTable({
-    userId: v.id("users"),
+    userId: v.id("users"), //userId is a foreign key that references the users table.
     firstName: v.optional(v.string()),
     lastName: v.optional(v.string()),
     email: v.optional(v.string()),
