@@ -13,6 +13,7 @@
   "dependencies": {
     "@clerk/nextjs": "^6.37.3",
     "@gsap/react": "^2.1.2",
+    "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -26,9 +27,11 @@
     "radix-ui": "^1.4.3",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "react-hook-form": "^7.71.2",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0",
-    "vcard-creator": "^0.7.2"
+    "vcard-creator": "^0.7.2",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
