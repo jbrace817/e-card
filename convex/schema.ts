@@ -18,7 +18,7 @@ export default defineSchema({
 
   cards: defineTable({
     userId: v.id("users"), //userId is a foreign key that references the users table.
-    firstName: v.optional(v.string()),
+    firstName: v.string(),
     lastName: v.optional(v.string()),
     email: v.optional(v.string()),
     phone: v.optional(v.string()),
