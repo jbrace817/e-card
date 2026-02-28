@@ -50,7 +50,7 @@ export const getCardByUsername = query({
 // Create or update the user's card (one card per user)
 export const upsertCard = mutation({
   args: {
-    firstName: v.optional(v.string()),
+    firstName: v.string(),
     lastName: v.optional(v.string()),
     email: v.optional(v.string()),
     phone: v.optional(v.string()),
