@@ -37,7 +37,16 @@ function CardForm({ initialData }: CardFormProps) {
   const upsertCard = useMutation(api.cards.upsertCard);
   const form = useForm<z.infer<typeof cardFormSchema>>({
     resolver: zodResolver(cardFormSchema),
-    defaultValues: initialData,
+    defaultValues: {
+      firstName: initialData?.firstName ?? "",
+      lastName: initialData?.lastName ?? "",
+      email: initialData?.email ?? "",
+      phone: initialData?.phone ?? "",
+      company: initialData?.company ?? "",
+      jobTitle: initialData?.jobTitle ?? "",
+      website: initialData?.website ?? "",
+      bio: initialData?.bio ?? "",
+    },
   });
   const {
     formState: { isSubmitting },
